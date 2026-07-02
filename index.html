@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, Across the Distance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <audio id="loveSong" src="assets/audio/bg-music.mp3" preload="auto" autoplay loop playsinline></audio>
+
+  <div class="sky" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Play music">
+    <span class="music-icon">♪</span>
+    <span id="musicText">Play</span>
+  </button>
+
+  <main class="story" id="story">
+    <section class="page hero is-active" data-page="0" aria-label="Opening">
+      <div class="hero-bg" role="img" aria-label="Animated night sky for a long distance love letter"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy reveal">
+        <p class="kicker">for the one i miss most</p>
+        <h1>For you, my love.</h1>
+        <p class="lead">I made this little universe because my heart keeps coming back to you.</p>
+        <button class="primary" id="startBtn" type="button">Open it slowly</button>
+      </div>
+      <div class="scroll-cue">swipe / click next</div>
+    </section>
+
+    <section class="page distance" data-page="1" aria-label="Distance">
+      <div class="page-inner split">
+        <div class="copy-block reveal">
+          <p class="kicker">page 01</p>
+          <h2>Distance is just a number trying too hard.</h2>
+          <p>I still look for you in small parts of my day: in songs, in late-night messages, and in the quiet seconds before your name lights up my screen.</p>
+        </div>
+        <div class="orbit-stage reveal delay-1" aria-hidden="true">
+          <div class="planet left">me</div>
+          <div class="orbit-line"></div>
+          <div class="planet right">you</div>
+          <div class="signal s1"></div>
+          <div class="signal s2"></div>
+          <div class="signal s3"></div>
+          <p class="orbit-note">two places, one feeling</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page gallery" data-page="2" aria-label="Memories">
+      <div class="page-inner">
+        <div class="copy-block narrow reveal">
+          <p class="kicker">page 02</p>
+          <h2>I keep the little moments close.</h2>
+          <p>Not because every photo is perfect, but because every version of you gives me one more reason to smile first.</p>
+        </div>
+        <div class="photo-rail reveal delay-1">
+          <figure><img src="assets/photos/story-intro.jpg" alt="First memory"><figcaption>the moment I started feeling sure</figcaption></figure>
+          <figure><img src="assets/photos/story-strip-1.jpg" alt="Second memory"><figcaption>the one I keep replaying</figcaption></figure>
+          <figure><img src="assets/photos/story-strip-2.jpg" alt="Third memory"><figcaption>the one that makes distance softer</figcaption></figure>
+          <figure><img src="assets/photos/story-strip-3.jpg" alt="Fourth memory"><figcaption>the one I want to repeat</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="page reasons" data-page="3" aria-label="Reasons">
+      <div class="page-inner split reverse">
+        <div class="reason-wheel reveal" aria-hidden="true">
+          <span>your laugh</span>
+          <span>your texts</span>
+          <span>your stories</span>
+          <span>your care</span>
+          <span>your randomness</span>
+          <span>your presence</span>
+        </div>
+        <div class="copy-block reveal delay-1">
+          <p class="kicker">page 03</p>
+          <h2>I like you even when loving from far away is not easy.</h2>
+          <p>I like the way you show up. The way you turn an ordinary day into something warmer. The way your name makes every notification feel different.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page proposal" data-page="4" aria-label="Question">
+      <div class="proposal-bg" aria-hidden="true"></div>
+      <div class="final-copy reveal">
+        <p class="kicker">last page</p>
+        <h2>So... can I be the person who loves you a little more seriously?</h2>
+        <p>From far away for now, until one day the distance becomes a memory.</p>
+        <div class="answer-row">
+          <button class="yes" id="yesBtn" type="button">Yes</button>
+          <button class="no" id="noBtn" type="button">Let me think</button>
+        </div>
+        <p class="answer" id="answerText" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="pager" aria-label="Page navigation">
+    <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous page">‹</button>
+    <div class="dots" id="dots"></div>
+    <button class="nav-btn" id="nextBtn" type="button" aria-label="Next page">›</button>
+  </nav>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
